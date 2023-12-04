@@ -1,6 +1,6 @@
 {
   "name": "openai-schemas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a collection json schema objects for validating openai endpoints requests and responses. This library also contains tools for scraping new schemas from the official api docs on openai.com when they are updated.",
   "keywords": [
     "openai",
