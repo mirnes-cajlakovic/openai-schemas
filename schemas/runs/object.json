@@ -56,40 +56,30 @@
               "array"
             ],
             "description": "A list of the relevant tool calls.",
-            "items": {
-              "oneOf": [
-                {
+            "properties": {
+              "type": [
+                "object"
+              ],
+              "properties": {
+                "id": {
                   "type": [
-                    "object"
+                    "string"
                   ],
-                  "properties": {}
+                  "description": "The ID of the tool call. This ID must be referenced when you submit the tool outputs in using the Submit tool outputs to run endpoint."
                 },
-                {
+                "type": {
                   "type": [
-                    "object"
+                    "string"
                   ],
-                  "properties": {}
+                  "description": "The type of tool call the output is required for. For now, this is always function."
                 },
-                {
+                "function": {
                   "type": [
                     "object"
                   ],
-                  "properties": {
-                    "name": {
-                      "type": [
-                        "string"
-                      ],
-                      "description": "The name of the function."
-                    },
-                    "arguments": {
-                      "type": [
-                        "string"
-                      ],
-                      "description": "The arguments that the model expects you to pass to the function."
-                    }
-                  }
+                  "description": "The function definition."
                 }
-              ]
+              }
             }
           }
         }

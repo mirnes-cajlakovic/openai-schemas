@@ -50,9 +50,14 @@ const Parse = {
             }
           }
         } else if (item.params && item.type.includes('array')) {
-          obj.properties[item.name].items = {
-            oneOf: item.params.map((param) =>
-              Parse.transform(param.params, { title: param.title }))
+          const objects = item.params.filter((param) => param.title)
+          if (objects.length > 0) {
+            obj.properties[item.name].items = {
+              oneOf: item.params.map((param) =>
+                Parse.transform(param.params, { title: param.title }))
+            }
+          } else {
+            obj.properties[item.name].properties = Parse.transform(item.params)
           }
         } else if (item.params && item.type.includes('object') && item.type.length > 1) {
           const instance = item.params.find((param) => param?.type?.includes('object'))

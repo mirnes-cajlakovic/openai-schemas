@@ -10,33 +10,36 @@
         "array"
       ],
       "description": "A list of messages to start the thread with.",
-      "items": {
-        "oneOf": [
-          {
+      "properties": {
+        "type": [
+          "object"
+        ],
+        "properties": {
+          "role": {
             "type": [
-              "object"
+              "string"
             ],
-            "properties": {}
+            "description": "The role of the entity that is creating the message. Currently only user is supported."
           },
-          {
+          "content": {
             "type": [
-              "object"
+              "string"
             ],
-            "properties": {}
+            "description": "The content of the message."
           },
-          {
+          "file_ids": {
             "type": [
-              "object"
+              "array"
             ],
-            "properties": {}
+            "description": "A list of File IDs that the message should use. There can be a maximum of 10 files attached to a message. Useful for tools like retrieval and code_interpreter that can access and use files."
           },
-          {
+          "metadata": {
             "type": [
-              "object"
+              "map"
             ],
-            "properties": {}
+            "description": "Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format. Keys can be a maximum of 64 characters long and values can be a maxium of 512 characters long."
           }
-        ]
+        }
       }
     },
     "metadata": {
