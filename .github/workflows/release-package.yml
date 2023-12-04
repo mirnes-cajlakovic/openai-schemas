@@ -1,0 +1,51 @@
+name: Create release and publish
+
+on:
+  push:
+    tags:
+      - v*
+env:
+  NODE_VERSION: "16.x"
+
+jobs:
+  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - run: npm i
+      - run: npm run lint
+      - run: npm run test
+      - run: npm run coverage
+  
+  release:
+    needs: [ test ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/create-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    needs: [ test, release ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: "https://registry.npmjs.org"
+      - run: npm i
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
