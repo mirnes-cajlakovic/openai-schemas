@@ -1,0 +1,1031 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Api Doc Mockup</title>
+  </head>
+  <body>
+    <div>
+
+      <div class="section endpoint">
+        <div class="section-left">
+          <div class="anchor-heading-root">
+            <a class="anchor-heading-link" href="/docs/api-reference/chat/create">
+              <h2 class="anchor-heading" data-name="chat/create">Create chat completion</h2>
+            </a>
+          </div>
+          <p><span class="endpoint-text"><span class="endpoint-method endpoint-method-post">post</span>&nbsp;<span class="endpoint-path">https://api.openai.com/v1/chat/completions</span></span></p>
+          <div class="endpoint-summary">
+            <p>Creates a model response for the given chat conversation.</p>
+          </div>
+          <div class="param-section">
+            <h3>Request body</h3>
+            <div class="param-table" id="chat-create__table">
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-messages" data-anchor="chat-create-messages" class="api-ref-anchor-link"></a>
+                  <div class="param-name">messages</div>
+                  <div class="param-type">array</div>
+                  <div class="param-reqd">Required</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>A list of messages comprising the conversation so far. <a href="https://cookbook.openai.com/examples/how_to_format_inputs_to_chatgpt_models" target="_blank" rel="noopener noreferrer">Example Python code</a>.</p>
+                  </div>
+                </div>
+                <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages_table"><span>Hide possible types</span></button>
+                <div class="param-table" id="chat-create-messages__table">
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <div class="param-title">System message</div>
+                      <div class="param-type">object</div>
+                    </div>
+                    <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-system-message_table"><span>Hide properties</span></button>
+                    <div class="param-table" id="chat-create-messages-system-message__table">
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-system-message-content" data-anchor="chat-create-messages-system-message-content" class="api-ref-anchor-link"></a>
+                          <div class="param-name">content</div>
+                          <div class="param-type">string or null</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The contents of the system message.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-system-message-role" data-anchor="chat-create-messages-system-message-role" class="api-ref-anchor-link"></a>
+                          <div class="param-name">role</div>
+                          <div class="param-type">string</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The role of the messages author, in this case <code>system</code>.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-system-message-name" data-anchor="chat-create-messages-system-message-name" class="api-ref-anchor-link"></a>
+                          <div class="param-name">name</div>
+                          <div class="param-type">string</div>
+                          <div class="param-optl">Optional</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>An optional name for the participant. Provides the model information to differentiate between participants of the same role.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <div class="param-title">User message</div>
+                      <div class="param-type">object</div>
+                    </div>
+                    <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-user-message_table"><span>Hide properties</span></button>
+                    <div class="param-table" id="chat-create-messages-user-message__table">
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-user-message-content" data-anchor="chat-create-messages-user-message-content" class="api-ref-anchor-link"></a>
+                          <div class="param-name">content</div>
+                          <div class="param-type">string or array</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The contents of the user message.</p>
+                          </div>
+                        </div>
+                        <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-user-message-content_table"><span>Hide possible types</span></button>
+                        <div class="param-table" id="chat-create-messages-user-message-content__table">
+                          <div class="param-row">
+                            <div class="param-row-header api-ref-anchor-link-hover">
+                              <div class="param-title">Text content</div>
+                              <div class="param-type">string</div>
+                            </div>
+                            <div class="param-desc">
+                              <div class="markdown-content">
+                                <p>The text contents of the message.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="param-row">
+                            <div class="param-row-header api-ref-anchor-link-hover">
+                              <div class="param-title">Array of content parts</div>
+                              <div class="param-type">array</div>
+                            </div>
+                            <div class="param-desc">
+                              <div class="markdown-content">
+                                <p>An array of content parts with a defined type, each can be of type <code>text</code> or <code>image_url</code> when passing in images. You can pass multiple images by adding multiple <code>image_url</code> content parts. Image input is only supported when using the <code>gpt-4-visual-preview</code> model.</p>
+                              </div>
+                            </div>
+                            <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-user-message-content-array-of-content-parts_table"><span>Hide possible types</span></button>
+                            <div class="param-table" id="chat-create-messages-user-message-content-array-of-content-parts__table">
+                              <div class="param-row">
+                                <div class="param-row-header api-ref-anchor-link-hover">
+                                  <div class="param-title">Text content part</div>
+                                  <div class="param-type">object</div>
+                                </div>
+                                <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-user-message-content-array-of-content-parts-text-content-part_table"><span>Hide properties</span></button>
+                                <div class="param-table" id="chat-create-messages-user-message-content-array-of-content-parts-text-content-part__table">
+                                  <div class="param-row">
+                                    <div class="param-row-header api-ref-anchor-link-hover">
+                                      <a href="#chat-create-messages-user-message-content-array-of-content-parts-text-content-part-type" data-anchor="chat-create-messages-user-message-content-array-of-content-parts-text-content-part-type" class="api-ref-anchor-link"></a>
+                                      <div class="param-name">type</div>
+                                      <div class="param-type">string</div>
+                                      <div class="param-reqd">Required</div>
+                                    </div>
+                                    <div class="param-desc">
+                                      <div class="markdown-content">
+                                        <p>The type of the content part.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="param-row">
+                                    <div class="param-row-header api-ref-anchor-link-hover">
+                                      <a href="#chat-create-messages-user-message-content-array-of-content-parts-text-content-part-text" data-anchor="chat-create-messages-user-message-content-array-of-content-parts-text-content-part-text" class="api-ref-anchor-link"></a>
+                                      <div class="param-name">text</div>
+                                      <div class="param-type">string</div>
+                                      <div class="param-reqd">Required</div>
+                                    </div>
+                                    <div class="param-desc">
+                                      <div class="markdown-content">
+                                        <p>The text content.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="param-row">
+                                <div class="param-row-header api-ref-anchor-link-hover">
+                                  <div class="param-title">Image content part</div>
+                                  <div class="param-type">object</div>
+                                </div>
+                                <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-user-message-content-array-of-content-parts-image-content-part_table"><span>Hide properties</span></button>
+                                <div class="param-table" id="chat-create-messages-user-message-content-array-of-content-parts-image-content-part__table">
+                                  <div class="param-row">
+                                    <div class="param-row-header api-ref-anchor-link-hover">
+                                      <a href="#chat-create-messages-user-message-content-array-of-content-parts-image-content-part-type" data-anchor="chat-create-messages-user-message-content-array-of-content-parts-image-content-part-type" class="api-ref-anchor-link"></a>
+                                      <div class="param-name">type</div>
+                                      <div class="param-type">string</div>
+                                      <div class="param-reqd">Required</div>
+                                    </div>
+                                    <div class="param-desc">
+                                      <div class="markdown-content">
+                                        <p>The type of the content part.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="param-row">
+                                    <div class="param-row-header api-ref-anchor-link-hover">
+                                      <a href="#chat-create-messages-user-message-content-array-of-content-parts-image-content-part-image_url" data-anchor="chat-create-messages-user-message-content-array-of-content-parts-image-content-part-image_url" class="api-ref-anchor-link"></a>
+                                      <div class="param-name">image_url</div>
+                                      <div class="param-type">object</div>
+                                      <div class="param-reqd">Required</div>
+                                    </div>
+                                    <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-user-message-content-array-of-content-parts-image-content-part-image_url_table"><span>Hide properties</span></button>
+                                    <div class="param-table" id="chat-create-messages-user-message-content-array-of-content-parts-image-content-part-image_url__table">
+                                      <div class="param-row">
+                                        <div class="param-row-header api-ref-anchor-link-hover">
+                                          <a href="#chat-create-messages-user-message-content-array-of-content-parts-image-content-part-image_url-url" data-anchor="chat-create-messages-user-message-content-array-of-content-parts-image-content-part-image_url-url" class="api-ref-anchor-link"></a>
+                                          <div class="param-name">url</div>
+                                          <div class="param-type">string</div>
+                                          <div class="param-reqd">Required</div>
+                                        </div>
+                                        <div class="param-desc">
+                                          <div class="markdown-content">
+                                            <p>Either a URL of the image or the base64 encoded image data.</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="param-row">
+                                        <div class="param-row-header api-ref-anchor-link-hover">
+                                          <a href="#chat-create-messages-user-message-content-array-of-content-parts-image-content-part-image_url-detail" data-anchor="chat-create-messages-user-message-content-array-of-content-parts-image-content-part-image_url-detail" class="api-ref-anchor-link"></a>
+                                          <div class="param-name">detail</div>
+                                          <div class="param-type">string</div>
+                                          <div class="param-optl">Optional</div>
+                                          <div class="param-default">Defaults to auto</div>
+                                        </div>
+                                        <div class="param-desc">
+                                          <div class="markdown-content">
+                                            <p>Specifies the detail level of the image. Learn more in the <a href="/docs/guides/vision/low-or-high-fidelity-image-understanding">Vision guide</a>.</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-user-message-role" data-anchor="chat-create-messages-user-message-role" class="api-ref-anchor-link"></a>
+                          <div class="param-name">role</div>
+                          <div class="param-type">string</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The role of the messages author, in this case <code>user</code>.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-user-message-name" data-anchor="chat-create-messages-user-message-name" class="api-ref-anchor-link"></a>
+                          <div class="param-name">name</div>
+                          <div class="param-type">string</div>
+                          <div class="param-optl">Optional</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>An optional name for the participant. Provides the model information to differentiate between participants of the same role.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <div class="param-title">Assistant message</div>
+                      <div class="param-type">object</div>
+                    </div>
+                    <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-assistant-message_table"><span>Hide properties</span></button>
+                    <div class="param-table" id="chat-create-messages-assistant-message__table">
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-assistant-message-content" data-anchor="chat-create-messages-assistant-message-content" class="api-ref-anchor-link"></a>
+                          <div class="param-name">content</div>
+                          <div class="param-type">string or null</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The contents of the assistant message.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-assistant-message-role" data-anchor="chat-create-messages-assistant-message-role" class="api-ref-anchor-link"></a>
+                          <div class="param-name">role</div>
+                          <div class="param-type">string</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The role of the messages author, in this case <code>assistant</code>.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-assistant-message-name" data-anchor="chat-create-messages-assistant-message-name" class="api-ref-anchor-link"></a>
+                          <div class="param-name">name</div>
+                          <div class="param-type">string</div>
+                          <div class="param-optl">Optional</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>An optional name for the participant. Provides the model information to differentiate between participants of the same role.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-assistant-message-tool_calls" data-anchor="chat-create-messages-assistant-message-tool_calls" class="api-ref-anchor-link"></a>
+                          <div class="param-name">tool_calls</div>
+                          <div class="param-type">array</div>
+                          <div class="param-optl">Optional</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The tool calls generated by the model, such as function calls.</p>
+                          </div>
+                        </div>
+                        <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-assistant-message-tool_calls_table"><span>Hide properties</span></button>
+                        <div class="param-table" id="chat-create-messages-assistant-message-tool_calls__table">
+                          <div class="param-row">
+                            <div class="param-row-header api-ref-anchor-link-hover">
+                              <a href="#chat-create-messages-assistant-message-tool_calls-id" data-anchor="chat-create-messages-assistant-message-tool_calls-id" class="api-ref-anchor-link"></a>
+                              <div class="param-name">id</div>
+                              <div class="param-type">string</div>
+                              <div class="param-reqd">Required</div>
+                            </div>
+                            <div class="param-desc">
+                              <div class="markdown-content">
+                                <p>The ID of the tool call.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="param-row">
+                            <div class="param-row-header api-ref-anchor-link-hover">
+                              <a href="#chat-create-messages-assistant-message-tool_calls-type" data-anchor="chat-create-messages-assistant-message-tool_calls-type" class="api-ref-anchor-link"></a>
+                              <div class="param-name">type</div>
+                              <div class="param-type">string</div>
+                              <div class="param-reqd">Required</div>
+                            </div>
+                            <div class="param-desc">
+                              <div class="markdown-content">
+                                <p>The type of the tool. Currently, only <code>function</code> is supported.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="param-row">
+                            <div class="param-row-header api-ref-anchor-link-hover">
+                              <a href="#chat-create-messages-assistant-message-tool_calls-function" data-anchor="chat-create-messages-assistant-message-tool_calls-function" class="api-ref-anchor-link"></a>
+                              <div class="param-name">function</div>
+                              <div class="param-type">object</div>
+                              <div class="param-reqd">Required</div>
+                            </div>
+                            <div class="param-desc">
+                              <div class="markdown-content">
+                                <p>The function that the model called.</p>
+                              </div>
+                            </div>
+                            <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-assistant-message-tool_calls-function_table"><span>Hide properties</span></button>
+                            <div class="param-table" id="chat-create-messages-assistant-message-tool_calls-function__table">
+                              <div class="param-row">
+                                <div class="param-row-header api-ref-anchor-link-hover">
+                                  <a href="#chat-create-messages-assistant-message-tool_calls-function-name" data-anchor="chat-create-messages-assistant-message-tool_calls-function-name" class="api-ref-anchor-link"></a>
+                                  <div class="param-name">name</div>
+                                  <div class="param-type">string</div>
+                                  <div class="param-reqd">Required</div>
+                                </div>
+                                <div class="param-desc">
+                                  <div class="markdown-content">
+                                    <p>The name of the function to call.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="param-row">
+                                <div class="param-row-header api-ref-anchor-link-hover">
+                                  <a href="#chat-create-messages-assistant-message-tool_calls-function-arguments" data-anchor="chat-create-messages-assistant-message-tool_calls-function-arguments" class="api-ref-anchor-link"></a>
+                                  <div class="param-name">arguments</div>
+                                  <div class="param-type">string</div>
+                                  <div class="param-reqd">Required</div>
+                                </div>
+                                <div class="param-desc">
+                                  <div class="markdown-content">
+                                    <p>The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-assistant-message-function_call" data-anchor="chat-create-messages-assistant-message-function_call" class="api-ref-anchor-link"></a>
+                          <div class="param-name">function_call</div>
+                          <div class="param-depr">Deprecated</div>
+                          <div class="param-type">object</div>
+                          <div class="param-optl">Optional</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>Deprecated and replaced by <code>tool_calls</code>. The name and arguments of a function that should be called, as generated by the model.</p>
+                          </div>
+                        </div>
+                        <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-assistant-message-function_call_table"><span>Hide properties</span></button>
+                        <div class="param-table" id="chat-create-messages-assistant-message-function_call__table">
+                          <div class="param-row">
+                            <div class="param-row-header api-ref-anchor-link-hover">
+                              <a href="#chat-create-messages-assistant-message-function_call-arguments" data-anchor="chat-create-messages-assistant-message-function_call-arguments" class="api-ref-anchor-link"></a>
+                              <div class="param-name">arguments</div>
+                              <div class="param-type">string</div>
+                              <div class="param-reqd">Required</div>
+                            </div>
+                            <div class="param-desc">
+                              <div class="markdown-content">
+                                <p>The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="param-row">
+                            <div class="param-row-header api-ref-anchor-link-hover">
+                              <a href="#chat-create-messages-assistant-message-function_call-name" data-anchor="chat-create-messages-assistant-message-function_call-name" class="api-ref-anchor-link"></a>
+                              <div class="param-name">name</div>
+                              <div class="param-type">string</div>
+                              <div class="param-reqd">Required</div>
+                            </div>
+                            <div class="param-desc">
+                              <div class="markdown-content">
+                                <p>The name of the function to call.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <div class="param-title">Tool message</div>
+                      <div class="param-type">object</div>
+                    </div>
+                    <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-tool-message_table"><span>Hide properties</span></button>
+                    <div class="param-table" id="chat-create-messages-tool-message__table">
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-tool-message-role" data-anchor="chat-create-messages-tool-message-role" class="api-ref-anchor-link"></a>
+                          <div class="param-name">role</div>
+                          <div class="param-type">string</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The role of the messages author, in this case <code>tool</code>.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-tool-message-content" data-anchor="chat-create-messages-tool-message-content" class="api-ref-anchor-link"></a>
+                          <div class="param-name">content</div>
+                          <div class="param-type">string or null</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The contents of the tool message.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-tool-message-tool_call_id" data-anchor="chat-create-messages-tool-message-tool_call_id" class="api-ref-anchor-link"></a>
+                          <div class="param-name">tool_call_id</div>
+                          <div class="param-type">string</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>Tool call that this message is responding to.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <div class="param-title">Function message</div>
+                      <div class="param-type">object</div>
+                      <div class="param-depr">Deprecated</div>
+                    </div>
+                    <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-messages-function-message_table"><span>Hide properties</span></button>
+                    <div class="param-table" id="chat-create-messages-function-message__table">
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-function-message-role" data-anchor="chat-create-messages-function-message-role" class="api-ref-anchor-link"></a>
+                          <div class="param-name">role</div>
+                          <div class="param-type">string</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The role of the messages author, in this case <code>function</code>.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-function-message-content" data-anchor="chat-create-messages-function-message-content" class="api-ref-anchor-link"></a>
+                          <div class="param-name">content</div>
+                          <div class="param-type">string</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The contents of the function message.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-messages-function-message-name" data-anchor="chat-create-messages-function-message-name" class="api-ref-anchor-link"></a>
+                          <div class="param-name">name</div>
+                          <div class="param-type">string</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The name of the function to call.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-model" data-anchor="chat-create-model" class="api-ref-anchor-link"></a>
+                  <div class="param-name">model</div>
+                  <div class="param-type">string</div>
+                  <div class="param-reqd">Required</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>ID of the model to use. See the <a href="/docs/models/model-endpoint-compatibility">model endpoint compatibility</a> table for details on which models work with the Chat API.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-frequency_penalty" data-anchor="chat-create-frequency_penalty" class="api-ref-anchor-link"></a>
+                  <div class="param-name">frequency_penalty</div>
+                  <div class="param-type">number or null</div>
+                  <div class="param-optl">Optional</div>
+                  <div class="param-default">Defaults to 0</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.</p>
+                    <p><a href="/docs/guides/text-generation/parameter-details">See more information about frequency and presence penalties.</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-logit_bias" data-anchor="chat-create-logit_bias" class="api-ref-anchor-link"></a>
+                  <div class="param-name">logit_bias</div>
+                  <div class="param-type">map</div>
+                  <div class="param-optl">Optional</div>
+                  <div class="param-default">Defaults to null</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>Modify the likelihood of specified tokens appearing in the completion.</p>
+                    <p>Accepts a JSON object that maps tokens (specified by their token ID in the tokenizer) to an associated bias value from -100 to 100. Mathematically, the bias is added to the logits generated by the model prior to sampling. The exact effect will vary per model, but values between -1 and 1 should decrease or increase likelihood of selection; values like -100 or 100 should result in a ban or exclusive selection of the relevant token.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-max_tokens" data-anchor="chat-create-max_tokens" class="api-ref-anchor-link"></a>
+                  <div class="param-name">max_tokens</div>
+                  <div class="param-type">integer or null</div>
+                  <div class="param-optl">Optional</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>The maximum number of <a href="/tokenizer">tokens</a> to generate in the chat completion.</p>
+                    <p>The total length of input tokens and generated tokens is limited by the model's context length. <a href="https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken" target="_blank" rel="noopener noreferrer">Example Python code</a> for counting tokens.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-n" data-anchor="chat-create-n" class="api-ref-anchor-link"></a>
+                  <div class="param-name">n</div>
+                  <div class="param-type">integer or null</div>
+                  <div class="param-optl">Optional</div>
+                  <div class="param-default">Defaults to 1</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>How many chat completion choices to generate for each input message. Note that you will be charged based on the number of generated tokens across all of the choices. Keep <code>n</code> as <code>1</code> to minimize costs.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-presence_penalty" data-anchor="chat-create-presence_penalty" class="api-ref-anchor-link"></a>
+                  <div class="param-name">presence_penalty</div>
+                  <div class="param-type">number or null</div>
+                  <div class="param-optl">Optional</div>
+                  <div class="param-default">Defaults to 0</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.</p>
+                    <p><a href="/docs/guides/text-generation/parameter-details">See more information about frequency and presence penalties.</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-response_format" data-anchor="chat-create-response_format" class="api-ref-anchor-link"></a>
+                  <div class="param-name">response_format</div>
+                  <div class="param-type">object</div>
+                  <div class="param-optl">Optional</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>An object specifying the format that the model must output.</p>
+                    <p>Setting to <code>{ "type": "json_object" }</code> enables JSON mode, which guarantees the message the model generates is valid JSON.</p>
+                    <p><strong>Important:</strong> when using JSON mode, you <strong>must</strong> also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly "stuck" request. Also note that the message content may be partially cut off if <code>finish_reason="length"</code>, which indicates the generation exceeded <code>max_tokens</code> or the conversation exceeded the max context length.</p>
+                  </div>
+                </div>
+                <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-response_format_table"><span>Hide properties</span></button>
+                <div class="param-table" id="chat-create-response_format__table">
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <a href="#chat-create-response_format-type" data-anchor="chat-create-response_format-type" class="api-ref-anchor-link"></a>
+                      <div class="param-name">type</div>
+                      <div class="param-type">string</div>
+                      <div class="param-optl">Optional</div>
+                      <div class="param-default">Defaults to text</div>
+                    </div>
+                    <div class="param-desc">
+                      <div class="markdown-content">
+                        <p>Must be one of <code>text</code> or <code>json_object</code>.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-seed" data-anchor="chat-create-seed" class="api-ref-anchor-link"></a>
+                  <div class="param-name">seed</div>
+                  <div class="param-type">integer or null</div>
+                  <div class="param-optl">Optional</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>This feature is in Beta.
+                      If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same <code>seed</code> and parameters should return the same result.
+                      Determinism is not guaranteed, and you should refer to the <code>system_fingerprint</code> response parameter to monitor changes in the backend.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-stop" data-anchor="chat-create-stop" class="api-ref-anchor-link"></a>
+                  <div class="param-name">stop</div>
+                  <div class="param-type">string / array / null</div>
+                  <div class="param-optl">Optional</div>
+                  <div class="param-default">Defaults to null</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>Up to 4 sequences where the API will stop generating further tokens.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-stream" data-anchor="chat-create-stream" class="api-ref-anchor-link"></a>
+                  <div class="param-name">stream</div>
+                  <div class="param-type">boolean or null</div>
+                  <div class="param-optl">Optional</div>
+                  <div class="param-default">Defaults to false</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>If set, partial message deltas will be sent, like in ChatGPT. Tokens will be sent as data-only <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format" target="_blank" rel="noopener noreferrer">server-sent events</a> as they become available, with the stream terminated by a <code>data: [DONE]</code> message. <a href="https://cookbook.openai.com/examples/how_to_stream_completions" target="_blank" rel="noopener noreferrer">Example Python code</a>.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-temperature" data-anchor="chat-create-temperature" class="api-ref-anchor-link"></a>
+                  <div class="param-name">temperature</div>
+                  <div class="param-type">number or null</div>
+                  <div class="param-optl">Optional</div>
+                  <div class="param-default">Defaults to 1</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.</p>
+                    <p>We generally recommend altering this or <code>top_p</code> but not both.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-top_p" data-anchor="chat-create-top_p" class="api-ref-anchor-link"></a>
+                  <div class="param-name">top_p</div>
+                  <div class="param-type">number or null</div>
+                  <div class="param-optl">Optional</div>
+                  <div class="param-default">Defaults to 1</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.</p>
+                    <p>We generally recommend altering this or <code>temperature</code> but not both.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-tools" data-anchor="chat-create-tools" class="api-ref-anchor-link"></a>
+                  <div class="param-name">tools</div>
+                  <div class="param-type">array</div>
+                  <div class="param-optl">Optional</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>A list of tools the model may call. Currently, only functions are supported as a tool. Use this to provide a list of functions the model may generate JSON inputs for.</p>
+                  </div>
+                </div>
+                <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-tools_table"><span>Hide properties</span></button>
+                <div class="param-table" id="chat-create-tools__table">
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <a href="#chat-create-tools-type" data-anchor="chat-create-tools-type" class="api-ref-anchor-link"></a>
+                      <div class="param-name">type</div>
+                      <div class="param-type">string</div>
+                      <div class="param-reqd">Required</div>
+                    </div>
+                    <div class="param-desc">
+                      <div class="markdown-content">
+                        <p>The type of the tool. Currently, only <code>function</code> is supported.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <a href="#chat-create-tools-function" data-anchor="chat-create-tools-function" class="api-ref-anchor-link"></a>
+                      <div class="param-name">function</div>
+                      <div class="param-type">object</div>
+                      <div class="param-reqd">Required</div>
+                    </div>
+                    <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-tools-function_table"><span>Hide properties</span></button>
+                    <div class="param-table" id="chat-create-tools-function__table">
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-tools-function-description" data-anchor="chat-create-tools-function-description" class="api-ref-anchor-link"></a>
+                          <div class="param-name">description</div>
+                          <div class="param-type">string</div>
+                          <div class="param-optl">Optional</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>A description of what the function does, used by the model to choose when and how to call the function.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-tools-function-name" data-anchor="chat-create-tools-function-name" class="api-ref-anchor-link"></a>
+                          <div class="param-name">name</div>
+                          <div class="param-type">string</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The name of the function to be called. Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-tools-function-parameters" data-anchor="chat-create-tools-function-parameters" class="api-ref-anchor-link"></a>
+                          <div class="param-name">parameters</div>
+                          <div class="param-type">object</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The parameters the functions accepts, described as a JSON Schema object. See the <a href="/docs/guides/text-generation/function-calling">guide</a> for examples, and the <a href="https://json-schema.org/understanding-json-schema/" target="_blank" rel="noopener noreferrer">JSON Schema reference</a> for documentation about the format.</p>
+                            <p>To describe a function that accepts no parameters, provide the value <code>{"type": "object", "properties": {}}</code>.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-tool_choice" data-anchor="chat-create-tool_choice" class="api-ref-anchor-link"></a>
+                  <div class="param-name">tool_choice</div>
+                  <div class="param-type">string or object</div>
+                  <div class="param-optl">Optional</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>Controls which (if any) function is called by the model.
+                      <code>none</code> means the model will not call a function and instead generates a message.
+                      <code>auto</code> means the model can pick between generating a message or calling a function.
+                      Specifying a particular function via <code>{"type: "function", "function": {"name": "my_function"}}</code> forces the model to call that function.
+                    </p>
+                    <p><code>none</code> is the default when no functions are present. <code>auto</code> is the default if functions are present.</p>
+                  </div>
+                </div>
+                <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-tool_choice_table"><span>Hide possible types</span></button>
+                <div class="param-table" id="chat-create-tool_choice__table">
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <div class="param-type">string</div>
+                    </div>
+                    <div class="param-desc">
+                      <div class="markdown-content">
+                        <p><code>none</code> means the model will not call a function and instead generates a message. <code>auto</code> means the model can pick between generating a message or calling a function.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <div class="param-type">object</div>
+                    </div>
+                    <div class="param-desc">
+                      <div class="markdown-content">
+                        <p>Specifies a tool the model should use. Use to force the model to call a specific function.</p>
+                      </div>
+                    </div>
+                    <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-tool_choice-object_table"><span>Hide properties</span></button>
+                    <div class="param-table" id="chat-create-tool_choice-object__table">
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-tool_choice-object-type" data-anchor="chat-create-tool_choice-object-type" class="api-ref-anchor-link"></a>
+                          <div class="param-name">type</div>
+                          <div class="param-type">string</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The type of the tool. Currently, only <code>function</code> is supported.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-tool_choice-object-function" data-anchor="chat-create-tool_choice-object-function" class="api-ref-anchor-link"></a>
+                          <div class="param-name">function</div>
+                          <div class="param-type">object</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-tool_choice-object-function_table"><span>Hide properties</span></button>
+                        <div class="param-table" id="chat-create-tool_choice-object-function__table">
+                          <div class="param-row">
+                            <div class="param-row-header api-ref-anchor-link-hover">
+                              <a href="#chat-create-tool_choice-object-function-name" data-anchor="chat-create-tool_choice-object-function-name" class="api-ref-anchor-link"></a>
+                              <div class="param-name">name</div>
+                              <div class="param-type">string</div>
+                              <div class="param-reqd">Required</div>
+                            </div>
+                            <div class="param-desc">
+                              <div class="markdown-content">
+                                <p>The name of the function to call.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-user" data-anchor="chat-create-user" class="api-ref-anchor-link"></a>
+                  <div class="param-name">user</div>
+                  <div class="param-type">string</div>
+                  <div class="param-optl">Optional</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. <a href="/docs/guides/safety-best-practices/end-user-ids">Learn more</a>.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-function_call" data-anchor="chat-create-function_call" class="api-ref-anchor-link"></a>
+                  <div class="param-name">function_call</div>
+                  <div class="param-depr">Deprecated</div>
+                  <div class="param-type">string or object</div>
+                  <div class="param-optl">Optional</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>Deprecated in favor of <code>tool_choice</code>.</p>
+                    <p>Controls which (if any) function is called by the model.
+                      <code>none</code> means the model will not call a function and instead generates a message.
+                      <code>auto</code> means the model can pick between generating a message or calling a function.
+                      Specifying a particular function via <code>{"name": "my_function"}</code> forces the model to call that function.
+                    </p>
+                    <p><code>none</code> is the default when no functions are present. <code>auto</code> is the default if functions are present.</p>
+                  </div>
+                </div>
+                <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-function_call_table"><span>Hide possible types</span></button>
+                <div class="param-table" id="chat-create-function_call__table">
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <div class="param-type">string</div>
+                    </div>
+                    <div class="param-desc">
+                      <div class="markdown-content">
+                        <p><code>none</code> means the model will not call a function and instead generates a message. <code>auto</code> means the model can pick between generating a message or calling a function.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <div class="param-type">object</div>
+                    </div>
+                    <div class="param-desc">
+                      <div class="markdown-content">
+                        <p>Specifying a particular function via <code>{"name": "my_function"}</code> forces the model to call that function.</p>
+                      </div>
+                    </div>
+                    <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-function_call-object_table"><span>Hide properties</span></button>
+                    <div class="param-table" id="chat-create-function_call-object__table">
+                      <div class="param-row">
+                        <div class="param-row-header api-ref-anchor-link-hover">
+                          <a href="#chat-create-function_call-object-name" data-anchor="chat-create-function_call-object-name" class="api-ref-anchor-link"></a>
+                          <div class="param-name">name</div>
+                          <div class="param-type">string</div>
+                          <div class="param-reqd">Required</div>
+                        </div>
+                        <div class="param-desc">
+                          <div class="markdown-content">
+                            <p>The name of the function to call.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="param-row">
+                <div class="param-row-header api-ref-anchor-link-hover">
+                  <a href="#chat-create-functions" data-anchor="chat-create-functions" class="api-ref-anchor-link"></a>
+                  <div class="param-name">functions</div>
+                  <div class="param-depr">Deprecated</div>
+                  <div class="param-type">array</div>
+                  <div class="param-optl">Optional</div>
+                </div>
+                <div class="param-desc">
+                  <div class="markdown-content">
+                    <p>Deprecated in favor of <code>tools</code>.</p>
+                    <p>A list of functions the model may generate JSON inputs for.</p>
+                  </div>
+                </div>
+                <button class="param-expand-button link-style" aria-expanded="true" aria-controls="chat-create-functions_table"><span>Hide properties</span></button>
+                <div class="param-table" id="chat-create-functions__table">
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <a href="#chat-create-functions-description" data-anchor="chat-create-functions-description" class="api-ref-anchor-link"></a>
+                      <div class="param-name">description</div>
+                      <div class="param-type">string</div>
+                      <div class="param-optl">Optional</div>
+                    </div>
+                    <div class="param-desc">
+                      <div class="markdown-content">
+                        <p>A description of what the function does, used by the model to choose when and how to call the function.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <a href="#chat-create-functions-name" data-anchor="chat-create-functions-name" class="api-ref-anchor-link"></a>
+                      <div class="param-name">name</div>
+                      <div class="param-type">string</div>
+                      <div class="param-reqd">Required</div>
+                    </div>
+                    <div class="param-desc">
+                      <div class="markdown-content">
+                        <p>The name of the function to be called. Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="param-row">
+                    <div class="param-row-header api-ref-anchor-link-hover">
+                      <a href="#chat-create-functions-parameters" data-anchor="chat-create-functions-parameters" class="api-ref-anchor-link"></a>
+                      <div class="param-name">parameters</div>
+                      <div class="param-type">object</div>
+                      <div class="param-reqd">Required</div>
+                    </div>
+                    <div class="param-desc">
+                      <div class="markdown-content">
+                        <p>The parameters the functions accepts, described as a JSON Schema object. See the <a href="/docs/guides/text-generation/function-calling">guide</a> for examples, and the <a href="https://json-schema.org/understanding-json-schema/" target="_blank" rel="noopener noreferrer">JSON Schema reference</a> for documentation about the format.</p>
+                        <p>To describe a function that accepts no parameters, provide the value <code>{"type": "object", "properties": {}}</code>.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="param-section">
+            <h3>Returns</h3>
+            <div class="param-table">
+              <div class="param-row">
+                <div class="markdown-content">
+                  <p>Returns a <a href="/docs/api-reference/chat/object">chat completion</a> object, or a streamed sequence of <a href="/docs/api-reference/chat/streaming">chat completion chunk</a> objects if the request is streamed.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div> 
+  </body>
+</html>

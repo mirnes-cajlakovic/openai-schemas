@@ -1,0 +1,97 @@
+{
+  "title": "fineTuning/object",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "string"
+      ],
+      "description": "The object identifier, which can be referenced in the API endpoints."
+    },
+    "created_at": {
+      "type": [
+        "integer"
+      ],
+      "description": "The Unix timestamp (in seconds) for when the fine-tuning job was created."
+    },
+    "error": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "For fine-tuning jobs that have failed, this will contain more information on the cause of the failure."
+    },
+    "fine_tuned_model": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The name of the fine-tuned model that is being created. The value will be null if the fine-tuning job is still running."
+    },
+    "finished_at": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The Unix timestamp (in seconds) for when the fine-tuning job was finished. The value will be null if the fine-tuning job is still running."
+    },
+    "hyperparameters": {
+      "type": [
+        "object"
+      ],
+      "description": "The hyperparameters used for the fine-tuning job. See the fine-tuning guide for more details."
+    },
+    "model": {
+      "type": [
+        "string"
+      ],
+      "description": "The base model that is being fine-tuned."
+    },
+    "object": {
+      "type": [
+        "string"
+      ],
+      "description": "The object type, which is always \"fine_tuning.job\"."
+    },
+    "organization_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The organization that owns the fine-tuning job."
+    },
+    "result_files": {
+      "type": [
+        "array"
+      ],
+      "description": "The compiled results file ID(s) for the fine-tuning job. You can retrieve the results with the Files API."
+    },
+    "status": {
+      "type": [
+        "string"
+      ],
+      "description": "The current status of the fine-tuning job, which can be either validating_files, queued, running, succeeded, failed, or cancelled."
+    },
+    "trained_tokens": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The total number of billable tokens processed by this fine-tuning job. The value will be null if the fine-tuning job is still running."
+    },
+    "training_file": {
+      "type": [
+        "string"
+      ],
+      "description": "The file ID used for training. You can retrieve the training data with the Files API."
+    },
+    "validation_file": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The file ID used for validation. You can retrieve the validation results with the Files API."
+    }
+  }
+}

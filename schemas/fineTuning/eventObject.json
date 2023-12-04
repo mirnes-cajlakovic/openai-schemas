@@ -1,0 +1,38 @@
+{
+  "title": "fineTuning/eventObject",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "string"
+      ],
+      "description": null
+    },
+    "created_at": {
+      "type": [
+        "integer"
+      ],
+      "description": null
+    },
+    "level": {
+      "type": [
+        "string"
+      ],
+      "description": null
+    },
+    "message": {
+      "type": [
+        "string"
+      ],
+      "description": null
+    },
+    "object": {
+      "type": [
+        "string"
+      ],
+      "description": null
+    }
+  }
+}

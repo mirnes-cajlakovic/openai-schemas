@@ -1,0 +1,15 @@
+{
+  "title": "assistants/modifyAssistant",
+  "description": "Modifies an assistant.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "assistant_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the assistant to modify."
+    }
+  }
+}

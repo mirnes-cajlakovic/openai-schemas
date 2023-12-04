@@ -1,0 +1,49 @@
+{
+  "title": "threads/createThread",
+  "description": "Create a thread.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "messages": {
+      "type": [
+        "array"
+      ],
+      "description": "A list of messages to start the thread with.",
+      "items": {
+        "oneOf": [
+          {
+            "type": [
+              "object"
+            ],
+            "properties": {}
+          },
+          {
+            "type": [
+              "object"
+            ],
+            "properties": {}
+          },
+          {
+            "type": [
+              "object"
+            ],
+            "properties": {}
+          },
+          {
+            "type": [
+              "object"
+            ],
+            "properties": {}
+          }
+        ]
+      }
+    },
+    "metadata": {
+      "type": [
+        "map"
+      ],
+      "description": "Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format. Keys can be a maximum of 64 characters long and values can be a maxium of 512 characters long."
+    }
+  }
+}

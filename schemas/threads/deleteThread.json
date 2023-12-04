@@ -1,0 +1,15 @@
+{
+  "title": "threads/deleteThread",
+  "description": "Delete a thread.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread to delete."
+    }
+  }
+}

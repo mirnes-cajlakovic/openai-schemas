@@ -1,0 +1,15 @@
+{
+  "title": "runs/createRun",
+  "description": "Create a run.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread to run."
+    }
+  }
+}

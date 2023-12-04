@@ -1,0 +1,21 @@
+{
+  "title": "runs/modifyRun",
+  "description": "Modifies a run.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread that was run."
+    },
+    "run_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the run to modify."
+    }
+  }
+}

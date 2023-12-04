@@ -1,0 +1,26 @@
+{
+  "title": "images/object",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "b64_json": {
+      "type": [
+        "string"
+      ],
+      "description": "The base64-encoded JSON of the generated image, if response_format is b64_json."
+    },
+    "url": {
+      "type": [
+        "string"
+      ],
+      "description": "The URL of the generated image, if response_format is url (default)."
+    },
+    "revised_prompt": {
+      "type": [
+        "string"
+      ],
+      "description": "The prompt that was used to generate the image, if there was any revision to the prompt."
+    }
+  }
+}

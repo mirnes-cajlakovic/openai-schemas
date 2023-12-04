@@ -1,0 +1,21 @@
+{
+  "title": "runs/listRunSteps",
+  "description": "Returns a list of run steps belonging to a run.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread the run and run steps belong to."
+    },
+    "run_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the run the run steps belong to."
+    }
+  }
+}

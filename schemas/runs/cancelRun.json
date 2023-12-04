@@ -1,0 +1,21 @@
+{
+  "title": "runs/cancelRun",
+  "description": "Cancels a run that is in_progress.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread to which this run belongs."
+    },
+    "run_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the run to cancel."
+    }
+  }
+}

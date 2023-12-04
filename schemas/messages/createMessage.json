@@ -1,0 +1,15 @@
+{
+  "title": "messages/createMessage",
+  "description": "Create a message.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread to create a message for."
+    }
+  }
+}

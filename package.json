@@ -1,0 +1,55 @@
+{
+  "name": "openai-schemas",
+  "version": "1.0.0",
+  "description": "This is a collection json schema objects for validating openai endpoints requests and responses. This library also contains tools for scraping new schemas from the official api docs on openai.com when they are updated.",
+  "keywords": [
+    "openai",
+    "openai-api",
+    "machine-learning",
+    "artificial-intelligence",
+    "chatgpt",
+    "chat-gpt",
+    "gpt",
+    "gpt-3",
+    "gpt-4",
+    "ai",
+    "agi",
+    "node",
+    "node.js",
+    "json",
+    "schemas"
+  ],
+  "author": "Mirnes Cajlakovic",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mirnes-cajlakovic/openai-schemas.git"
+  },
+  "publishConfig": {
+    "@mirnes-cajlakovic:registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "update": "node -r dotenv/config bin/update.js",
+    "lint": "eslint src/ test/",
+    "test": "npm run lint && nyc --reporter=html --reporter=text mocha",
+    "coverage": "nyc check-coverage --lines 100 --branches 100 --functions 100 --statements 100"
+  },
+  "dependencies": {
+    "puppeteer": "^21.5.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.55.0",
+    "eslint-config-standard": "^17.1.0",
+    "jsdom": "^23.0.1",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "proxyquire": "^2.1.3",
+    "sinon": "^17.0.1"
+  },
+  "nyc": {
+    "include": "src/"
+  }
+}

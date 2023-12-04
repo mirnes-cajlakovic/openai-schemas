@@ -1,0 +1,21 @@
+{
+  "title": "messages/listMessageFiles",
+  "description": "Returns a list of message files.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread that the message and files belong to."
+    },
+    "message_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the message that the files belongs to."
+    }
+  }
+}

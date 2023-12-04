@@ -1,0 +1,15 @@
+{
+  "title": "files/delete",
+  "description": "Delete a file.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "file_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the file to use for this request."
+    }
+  }
+}

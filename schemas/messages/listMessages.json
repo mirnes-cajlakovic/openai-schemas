@@ -1,0 +1,15 @@
+{
+  "title": "messages/listMessages",
+  "description": "Returns a list of messages for a given thread.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread the messages belong to."
+    }
+  }
+}

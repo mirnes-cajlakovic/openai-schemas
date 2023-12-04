@@ -1,0 +1,44 @@
+{
+  "title": "files/object",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "string"
+      ],
+      "description": "The file identifier, which can be referenced in the API endpoints."
+    },
+    "bytes": {
+      "type": [
+        "integer"
+      ],
+      "description": "The size of the file, in bytes."
+    },
+    "created_at": {
+      "type": [
+        "integer"
+      ],
+      "description": "The Unix timestamp (in seconds) for when the file was created."
+    },
+    "filename": {
+      "type": [
+        "string"
+      ],
+      "description": "The name of the file."
+    },
+    "object": {
+      "type": [
+        "string"
+      ],
+      "description": "The object type, which is always file."
+    },
+    "purpose": {
+      "type": [
+        "string"
+      ],
+      "description": "The intended purpose of the file. Supported values are fine-tune, fine-tune-results, assistants, and assistants_output."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "models/delete",
+  "description": "Delete a fine-tuned model. You must have the Owner role in your organization to delete a model.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "model": {
+      "type": [
+        "string"
+      ],
+      "description": "The model to delete"
+    }
+  }
+}

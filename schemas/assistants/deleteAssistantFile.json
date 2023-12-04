@@ -1,0 +1,21 @@
+{
+  "title": "assistants/deleteAssistantFile",
+  "description": "Delete an assistant file.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "assistant_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the assistant that the file belongs to."
+    },
+    "file_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the file to delete."
+    }
+  }
+}

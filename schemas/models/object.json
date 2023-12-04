@@ -1,0 +1,32 @@
+{
+  "title": "models/object",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "string"
+      ],
+      "description": "The model identifier, which can be referenced in the API endpoints."
+    },
+    "created": {
+      "type": [
+        "integer"
+      ],
+      "description": "The Unix timestamp (in seconds) when the model was created."
+    },
+    "object": {
+      "type": [
+        "string"
+      ],
+      "description": "The object type, which is always \"model\"."
+    },
+    "owned_by": {
+      "type": [
+        "string"
+      ],
+      "description": "The organization that owns the model."
+    }
+  }
+}

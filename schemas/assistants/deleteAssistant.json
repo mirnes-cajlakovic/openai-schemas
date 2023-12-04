@@ -1,0 +1,15 @@
+{
+  "title": "assistants/deleteAssistant",
+  "description": "Delete an assistant.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "assistant_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the assistant to delete."
+    }
+  }
+}

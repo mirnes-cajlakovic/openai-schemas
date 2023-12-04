@@ -1,0 +1,27 @@
+{
+  "title": "messages/getMessageFile",
+  "description": "Retrieves a message file.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread to which the message and File belong."
+    },
+    "message_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the message the file belongs to."
+    },
+    "file_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the file being retrieved."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "fineTuning/cancel",
+  "description": "Immediately cancel a fine-tune job.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "fine_tuning_job_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the fine-tuning job to cancel."
+    }
+  }
+}

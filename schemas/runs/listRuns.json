@@ -1,0 +1,15 @@
+{
+  "title": "runs/listRuns",
+  "description": "Returns a list of runs belonging to a thread.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread the run belongs to."
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "title": "messages/getMessage",
+  "description": "Retrieve a message.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread to which this message belongs."
+    },
+    "message_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the message to retrieve."
+    }
+  }
+}

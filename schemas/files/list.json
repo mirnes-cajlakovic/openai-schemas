@@ -1,0 +1,15 @@
+{
+  "title": "files/list",
+  "description": "Returns a list of files that belong to the user's organization.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "purpose": {
+      "type": [
+        "string"
+      ],
+      "description": "Only return files with the given purpose."
+    }
+  }
+}

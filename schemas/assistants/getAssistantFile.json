@@ -1,0 +1,21 @@
+{
+  "title": "assistants/getAssistantFile",
+  "description": "Retrieves an AssistantFile.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "assistant_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the assistant who the file belongs to."
+    },
+    "file_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the file we're getting."
+    }
+  }
+}

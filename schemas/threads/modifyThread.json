@@ -1,0 +1,15 @@
+{
+  "title": "threads/modifyThread",
+  "description": "Modifies a thread.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread to modify. Only the metadata can be modified."
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "title": "assistants/fileObject",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "string"
+      ],
+      "description": "The identifier, which can be referenced in API endpoints."
+    },
+    "object": {
+      "type": [
+        "string"
+      ],
+      "description": "The object type, which is always assistant.file."
+    },
+    "created_at": {
+      "type": [
+        "integer"
+      ],
+      "description": "The Unix timestamp (in seconds) for when the assistant file was created."
+    },
+    "assistant_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The assistant ID that the file is attached to."
+    }
+  }
+}

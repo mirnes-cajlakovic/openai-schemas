@@ -1,0 +1,15 @@
+{
+  "title": "assistants/createAssistantFile",
+  "description": "Create an assistant file by attaching a File to an assistant.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "assistant_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the assistant for which to create a File."
+    }
+  }
+}

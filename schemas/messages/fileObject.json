@@ -1,0 +1,32 @@
+{
+  "title": "messages/fileObject",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "string"
+      ],
+      "description": "The identifier, which can be referenced in API endpoints."
+    },
+    "object": {
+      "type": [
+        "string"
+      ],
+      "description": "The object type, which is always thread.message.file."
+    },
+    "created_at": {
+      "type": [
+        "integer"
+      ],
+      "description": "The Unix timestamp (in seconds) for when the message file was created."
+    },
+    "message_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the message that the File is attached to."
+    }
+  }
+}

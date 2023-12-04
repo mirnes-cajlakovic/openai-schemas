@@ -1,0 +1,15 @@
+{
+  "title": "threads/getThread",
+  "description": "Retrieves a thread.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread to retrieve."
+    }
+  }
+}

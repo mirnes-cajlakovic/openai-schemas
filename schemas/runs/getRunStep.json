@@ -1,0 +1,27 @@
+{
+  "title": "runs/getRunStep",
+  "description": "Retrieves a run step.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the thread to which the run and run step belongs."
+    },
+    "run_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the run to which the run step belongs."
+    },
+    "step_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the run step to retrieve."
+    }
+  }
+}

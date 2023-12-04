@@ -1,0 +1,15 @@
+{
+  "title": "assistants/listAssistantFiles",
+  "description": "Returns a list of assistant files.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "assistant_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the assistant the file belongs to."
+    }
+  }
+}

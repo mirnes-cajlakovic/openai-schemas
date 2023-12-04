@@ -1,0 +1,182 @@
+{
+  "title": "moderations/object",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "string"
+      ],
+      "description": "The unique identifier for the moderation request."
+    },
+    "model": {
+      "type": [
+        "string"
+      ],
+      "description": "The model used to generate the moderation results."
+    },
+    "results": {
+      "type": [
+        "array"
+      ],
+      "description": "A list of moderation objects.",
+      "items": {
+        "oneOf": [
+          {
+            "type": [
+              "object"
+            ],
+            "properties": {}
+          },
+          {
+            "type": [
+              "object"
+            ],
+            "properties": {
+              "hate": {
+                "type": [
+                  "boolean"
+                ],
+                "description": "Content that expresses, incites, or promotes hate based on race, gender, ethnicity, religion, nationality, sexual orientation, disability status, or caste. Hateful content aimed at non-protected groups (e.g., chess players) is harrassment."
+              },
+              "hate/threatening": {
+                "type": [
+                  "boolean"
+                ],
+                "description": "Hateful content that also includes violence or serious harm towards the targeted group based on race, gender, ethnicity, religion, nationality, sexual orientation, disability status, or caste."
+              },
+              "harassment": {
+                "type": [
+                  "boolean"
+                ],
+                "description": "Content that expresses, incites, or promotes harassing language towards any target."
+              },
+              "harassment/threatening": {
+                "type": [
+                  "boolean"
+                ],
+                "description": "Harassment content that also includes violence or serious harm towards any target."
+              },
+              "self-harm": {
+                "type": [
+                  "boolean"
+                ],
+                "description": "Content that promotes, encourages, or depicts acts of self-harm, such as suicide, cutting, and eating disorders."
+              },
+              "self-harm/intent": {
+                "type": [
+                  "boolean"
+                ],
+                "description": "Content where the speaker expresses that they are engaging or intend to engage in acts of self-harm, such as suicide, cutting, and eating disorders."
+              },
+              "self-harm/instructions": {
+                "type": [
+                  "boolean"
+                ],
+                "description": "Content that encourages performing acts of self-harm, such as suicide, cutting, and eating disorders, or that gives instructions or advice on how to commit such acts."
+              },
+              "sexual": {
+                "type": [
+                  "boolean"
+                ],
+                "description": "Content meant to arouse sexual excitement, such as the description of sexual activity, or that promotes sexual services (excluding sex education and wellness)."
+              },
+              "sexual/minors": {
+                "type": [
+                  "boolean"
+                ],
+                "description": "Sexual content that includes an individual who is under 18 years old."
+              },
+              "violence": {
+                "type": [
+                  "boolean"
+                ],
+                "description": "Content that depicts death, violence, or physical injury."
+              },
+              "violence/graphic": {
+                "type": [
+                  "boolean"
+                ],
+                "description": "Content that depicts death, violence, or physical injury in graphic detail."
+              }
+            }
+          },
+          {
+            "type": [
+              "object"
+            ],
+            "properties": {
+              "hate": {
+                "type": [
+                  "number"
+                ],
+                "description": "The score for the category 'hate'."
+              },
+              "hate/threatening": {
+                "type": [
+                  "number"
+                ],
+                "description": "The score for the category 'hate/threatening'."
+              },
+              "harassment": {
+                "type": [
+                  "number"
+                ],
+                "description": "The score for the category 'harassment'."
+              },
+              "harassment/threatening": {
+                "type": [
+                  "number"
+                ],
+                "description": "The score for the category 'harassment/threatening'."
+              },
+              "self-harm": {
+                "type": [
+                  "number"
+                ],
+                "description": "The score for the category 'self-harm'."
+              },
+              "self-harm/intent": {
+                "type": [
+                  "number"
+                ],
+                "description": "The score for the category 'self-harm/intent'."
+              },
+              "self-harm/instructions": {
+                "type": [
+                  "number"
+                ],
+                "description": "The score for the category 'self-harm/instructions'."
+              },
+              "sexual": {
+                "type": [
+                  "number"
+                ],
+                "description": "The score for the category 'sexual'."
+              },
+              "sexual/minors": {
+                "type": [
+                  "number"
+                ],
+                "description": "The score for the category 'sexual/minors'."
+              },
+              "violence": {
+                "type": [
+                  "number"
+                ],
+                "description": "The score for the category 'violence'."
+              },
+              "violence/graphic": {
+                "type": [
+                  "number"
+                ],
+                "description": "The score for the category 'violence/graphic'."
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

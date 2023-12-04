@@ -1,0 +1,114 @@
+{
+  "title": "messages/object",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "string"
+      ],
+      "description": "The identifier, which can be referenced in API endpoints."
+    },
+    "object": {
+      "type": [
+        "string"
+      ],
+      "description": "The object type, which is always thread.message."
+    },
+    "created_at": {
+      "type": [
+        "integer"
+      ],
+      "description": "The Unix timestamp (in seconds) for when the message was created."
+    },
+    "thread_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The thread ID that this message belongs to."
+    },
+    "role": {
+      "type": [
+        "string"
+      ],
+      "description": "The entity that produced the message. One of user or assistant."
+    },
+    "content": {
+      "type": [
+        "array"
+      ],
+      "description": "The content of the message in array of text and/or images.",
+      "items": {
+        "oneOf": [
+          {
+            "title": "Image file",
+            "type": [
+              "object"
+            ],
+            "properties": {
+              "type": {
+                "type": [
+                  "string"
+                ],
+                "description": "Always image_file."
+              },
+              "image_file": {
+                "type": [
+                  "object"
+                ],
+                "description": null
+              }
+            }
+          },
+          {
+            "title": "Text",
+            "type": [
+              "object"
+            ],
+            "properties": {
+              "type": {
+                "type": [
+                  "string"
+                ],
+                "description": "Always text."
+              },
+              "text": {
+                "type": [
+                  "object"
+                ],
+                "description": null
+              }
+            }
+          }
+        ]
+      }
+    },
+    "assistant_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If applicable, the ID of the assistant that authored this message."
+    },
+    "run_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If applicable, the ID of the run associated with the authoring of this message."
+    },
+    "file_ids": {
+      "type": [
+        "array"
+      ],
+      "description": "A list of file IDs that the assistant should use. Useful for tools like retrieval and code_interpreter that can access files. A maximum of 10 files can be attached to a message."
+    },
+    "metadata": {
+      "type": [
+        "map"
+      ],
+      "description": "Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format. Keys can be a maximum of 64 characters long and values can be a maxium of 512 characters long."
+    }
+  }
+}

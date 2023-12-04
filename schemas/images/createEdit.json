@@ -1,0 +1,60 @@
+{
+  "title": "images/createEdit",
+  "description": "Creates an edited or extended image given an original image and a prompt.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "image": {
+      "type": [
+        "file"
+      ],
+      "description": "The image to edit. Must be a valid PNG file, less than 4MB, and square. If mask is not provided, image must have transparency, which will be used as the mask."
+    },
+    "prompt": {
+      "type": [
+        "string"
+      ],
+      "description": "A text description of the desired image(s). The maximum length is 1000 characters."
+    },
+    "mask": {
+      "type": [
+        "file"
+      ],
+      "description": "An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as image."
+    },
+    "model": {
+      "type": [
+        "string"
+      ],
+      "description": "The model to use for image generation. Only dall-e-2 is supported at this time."
+    },
+    "n": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The number of images to generate. Must be between 1 and 10."
+    },
+    "size": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024."
+    },
+    "response_format": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The format in which the generated images are returned. Must be one of url or b64_json."
+    },
+    "user": {
+      "type": [
+        "string"
+      ],
+      "description": "A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. Learn more."
+    }
+  }
+}

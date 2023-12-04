@@ -1,0 +1,15 @@
+{
+  "title": "files/retrieve",
+  "description": "Returns information about a specific file.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "file_id": {
+      "type": [
+        "string"
+      ],
+      "description": "The ID of the file to use for this request."
+    }
+  }
+}

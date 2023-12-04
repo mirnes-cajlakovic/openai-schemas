@@ -1,0 +1,21 @@
+{
+  "title": "fineTuning/list",
+  "description": "List your organization's fine-tuning jobs",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "after": {
+      "type": [
+        "string"
+      ],
+      "description": "Identifier for the last job from the previous pagination request."
+    },
+    "limit": {
+      "type": [
+        "integer"
+      ],
+      "description": "Number of fine-tuning jobs to retrieve."
+    }
+  }
+}

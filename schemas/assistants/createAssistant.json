@@ -1,0 +1,106 @@
+{
+  "title": "assistants/createAssistant",
+  "description": "Create an assistant with a model and instructions.",
+  "type": [
+    "object"
+  ],
+  "properties": {
+    "model": {
+      "type": [
+        ""
+      ],
+      "description": "ID of the model to use. You can use the List models API to see all of your available models, or see our Model overview for descriptions of them."
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The name of the assistant. The maximum length is 256 characters."
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The description of the assistant. The maximum length is 512 characters."
+    },
+    "instructions": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The system instructions that the assistant uses. The maximum length is 32768 characters."
+    },
+    "tools": {
+      "type": [
+        "array"
+      ],
+      "description": "A list of tool enabled on the assistant. There can be a maximum of 128 tools per assistant. Tools can be of types code_interpreter, retrieval, or function.",
+      "items": {
+        "oneOf": [
+          {
+            "title": "Code interpreter tool",
+            "type": [
+              "object"
+            ],
+            "properties": {
+              "type": {
+                "type": [
+                  "string"
+                ],
+                "description": "The type of tool being defined: code_interpreter"
+              }
+            }
+          },
+          {
+            "title": "Retrieval tool",
+            "type": [
+              "object"
+            ],
+            "properties": {
+              "type": {
+                "type": [
+                  "string"
+                ],
+                "description": "The type of tool being defined: retrieval"
+              }
+            }
+          },
+          {
+            "title": "Function tool",
+            "type": [
+              "object"
+            ],
+            "properties": {
+              "type": {
+                "type": [
+                  "string"
+                ],
+                "description": "The type of tool being defined: function"
+              },
+              "function": {
+                "type": [
+                  "object"
+                ],
+                "description": null
+              }
+            }
+          }
+        ]
+      }
+    },
+    "file_ids": {
+      "type": [
+        "array"
+      ],
+      "description": "A list of file IDs attached to this assistant. There can be a maximum of 20 files attached to the assistant. Files are ordered by their creation date in ascending order."
+    },
+    "metadata": {
+      "type": [
+        "map"
+      ],
+      "description": "Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format. Keys can be a maximum of 64 characters long and values can be a maxium of 512 characters long."
+    }
+  }
+}
