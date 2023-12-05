@@ -4,6 +4,9 @@
   "type": [
     "object"
   ],
+  "required": [
+    "thread_id"
+  ],
   "properties": {
     "thread_id": {
       "type": [

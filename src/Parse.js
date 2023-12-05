@@ -41,6 +41,29 @@ const Parse = {
           description: item.markdown
         }
 
+        if (item.required) {
+          obj.required.push(item.name)
+        }
+
+        if (item.defaults) {
+          if ((item.type.includes('null') || item.type.includes('map')) &&
+            item.defaults === 'null') {
+            obj.properties[item.name].default = null
+          } else if (item.type.includes('array') && item.defaults === '[]') {
+            obj.properties[item.name].default = []
+          } else if ((item.type.includes('number') || item.type.includes('integer')) &&
+            !isNaN(parseFloat(item.defaults)) &&
+            isFinite(item.defaults)) {
+            obj.properties[item.name].default = parseFloat(item.defaults)
+          } else if (item.type.includes('string') &&
+            typeof item.defaults === 'string') {
+            obj.properties[item.name].default = item.defaults
+          } else if (item.type.includes('boolean') &&
+            (item.defaults === 'true' || item.defaults === 'false')) {
+            obj.properties[item.name].default = item.defaults === 'true'
+          }
+        }
+
         if (item.params && item.type.includes('array') && item.type.length > 1) {
           const array = item.params.find((param) => param?.type?.includes('array'))
           if (array && array.params) {
@@ -67,7 +90,11 @@ const Parse = {
         }
 
         return obj
-      }, { ...properties, type: ['object'], properties: {} })
+      }, { ...properties, type: ['object'], required: [], properties: {} })
+
+    if (schema.required.length === 0) {
+      delete schema.required
+    }
 
     return schema
   },

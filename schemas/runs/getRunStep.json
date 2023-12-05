@@ -4,6 +4,11 @@
   "type": [
     "object"
   ],
+  "required": [
+    "thread_id",
+    "run_id",
+    "step_id"
+  ],
   "properties": {
     "thread_id": {
       "type": [

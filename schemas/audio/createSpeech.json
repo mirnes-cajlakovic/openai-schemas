@@ -4,6 +4,11 @@
   "type": [
     "object"
   ],
+  "required": [
+    "model",
+    "input",
+    "voice"
+  ],
   "properties": {
     "model": {
       "type": [
@@ -27,13 +32,15 @@
       "type": [
         "string"
       ],
-      "description": "The format to audio in. Supported formats are mp3, opus, aac, and flac."
+      "description": "The format to audio in. Supported formats are mp3, opus, aac, and flac.",
+      "default": "mp3"
     },
     "speed": {
       "type": [
         "number"
       ],
-      "description": "The speed of the generated audio. Select a value from 0.25 to 4.0. 1.0 is the default."
+      "description": "The speed of the generated audio. Select a value from 0.25 to 4.0. 1.0 is the default.",
+      "default": 1
     }
   }
 }

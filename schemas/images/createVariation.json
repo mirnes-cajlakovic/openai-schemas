@@ -4,6 +4,9 @@
   "type": [
     "object"
   ],
+  "required": [
+    "image"
+  ],
   "properties": {
     "image": {
       "type": [
@@ -15,28 +18,32 @@
       "type": [
         "string"
       ],
-      "description": "The model to use for image generation. Only dall-e-2 is supported at this time."
+      "description": "The model to use for image generation. Only dall-e-2 is supported at this time.",
+      "default": "dall-e-2"
     },
     "n": {
       "type": [
         "integer",
         "null"
       ],
-      "description": "The number of images to generate. Must be between 1 and 10. For dall-e-3, only n=1 is supported."
+      "description": "The number of images to generate. Must be between 1 and 10. For dall-e-3, only n=1 is supported.",
+      "default": 1
     },
     "response_format": {
       "type": [
         "string",
         "null"
       ],
-      "description": "The format in which the generated images are returned. Must be one of url or b64_json."
+      "description": "The format in which the generated images are returned. Must be one of url or b64_json.",
+      "default": "url"
     },
     "size": {
       "type": [
         "string",
         "null"
       ],
-      "description": "The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024."
+      "description": "The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024.",
+      "default": "1024x1024"
     },
     "user": {
       "type": [

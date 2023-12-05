@@ -4,6 +4,9 @@
   "type": [
     "object"
   ],
+  "required": [
+    "model"
+  ],
   "properties": {
     "model": {
       "type": [

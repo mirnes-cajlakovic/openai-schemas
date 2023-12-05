@@ -48,8 +48,12 @@ describe('Parse', function () {
     })
     it('should transform without array or instance var', function () {
       const dataset = [
-        { name: 'test', type: ['string', 'array'], params: [{}] },
-        { name: 'test', type: ['string', 'object'], params: [{}] }
+        { name: 'testA', type: ['string', 'array'], params: [{}] },
+        { name: 'testB', type: ['string', 'array'], defaults: '[]', params: [{}] },
+        { name: 'testC', type: ['string', 'object'], params: [{}] },
+        { name: 'testD', type: ['boolean'], defaults: 'true', params: [{}] },
+        { name: 'testE', type: ['boolean'], defaults: 'false', params: [{}] },
+        { name: 'testF', type: ['boolean'], defaults: '<>', params: [{}] }
       ]
       const properties = { title: 'Test' }
 

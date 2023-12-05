@@ -15,7 +15,8 @@
       "type": [
         "integer"
       ],
-      "description": "Number of fine-tuning jobs to retrieve."
+      "description": "Number of fine-tuning jobs to retrieve.",
+      "default": 20
     }
   }
 }

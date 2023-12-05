@@ -4,6 +4,9 @@
   "type": [
     "object"
   ],
+  "required": [
+    "model"
+  ],
   "properties": {
     "model": {
       "type": [
@@ -37,12 +40,16 @@
         "array"
       ],
       "description": "A list of tool enabled on the assistant. There can be a maximum of 128 tools per assistant. Tools can be of types code_interpreter, retrieval, or function.",
+      "default": [],
       "items": {
         "oneOf": [
           {
             "title": "Code interpreter tool",
             "type": [
               "object"
+            ],
+            "required": [
+              "type"
             ],
             "properties": {
               "type": {
@@ -58,6 +65,9 @@
             "type": [
               "object"
             ],
+            "required": [
+              "type"
+            ],
             "properties": {
               "type": {
                 "type": [
@@ -71,6 +81,10 @@
             "title": "Function tool",
             "type": [
               "object"
+            ],
+            "required": [
+              "type",
+              "function"
             ],
             "properties": {
               "type": {
@@ -94,7 +108,8 @@
       "type": [
         "array"
       ],
-      "description": "A list of file IDs attached to this assistant. There can be a maximum of 20 files attached to the assistant. Files are ordered by their creation date in ascending order."
+      "description": "A list of file IDs attached to this assistant. There can be a maximum of 20 files attached to the assistant. Files are ordered by their creation date in ascending order.",
+      "default": []
     },
     "metadata": {
       "type": [

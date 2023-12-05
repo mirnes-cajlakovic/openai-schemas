@@ -4,6 +4,9 @@
   "type": [
     "object"
   ],
+  "required": [
+    "assistant_id"
+  ],
   "properties": {
     "assistant_id": {
       "type": [

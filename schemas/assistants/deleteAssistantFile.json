@@ -4,6 +4,10 @@
   "type": [
     "object"
   ],
+  "required": [
+    "assistant_id",
+    "file_id"
+  ],
   "properties": {
     "assistant_id": {
       "type": [

@@ -4,6 +4,11 @@
   "type": [
     "object"
   ],
+  "required": [
+    "thread_id",
+    "message_id",
+    "file_id"
+  ],
   "properties": {
     "thread_id": {
       "type": [

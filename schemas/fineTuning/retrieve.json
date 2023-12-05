@@ -4,6 +4,9 @@
   "type": [
     "object"
   ],
+  "required": [
+    "fine_tuning_job_id"
+  ],
   "properties": {
     "fine_tuning_job_id": {
       "type": [

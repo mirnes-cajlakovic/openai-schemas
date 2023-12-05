@@ -4,6 +4,9 @@
   "type": [
     "object"
   ],
+  "required": [
+    "file_id"
+  ],
   "properties": {
     "file_id": {
       "type": [
